@@ -7,8 +7,7 @@ from cryptography.fernet import Fernet
 class Manager:
 
     def __init__(self, root):
-        root.title("Tiny Manager")
-        #root.geometry("200x110")
+        root.title("Password Manager")
         root.resizable(width=False, height=False)
         self.widgets()
 
@@ -24,7 +23,7 @@ class Manager:
 
         encrypt_widget.resizable(width=False, height=False)
         encrypt_widget.geometry("680x85")
-        encrypt_widget.title("Encrypt - TinyManager")
+        encrypt_widget.title("Encrypt - PassManager")
 
         self.encrypt_text = tk.Entry(encrypt_widget, width=65, font=("Ubuntu", 10))
         self.encrypt_text.grid(row=0, column=1, columnspan=6)
@@ -50,7 +49,7 @@ class Manager:
 
         decrypt_widget.resizable(width=False, height=False)
         decrypt_widget.geometry("700x85")
-        decrypt_widget.title("Decrypt - TinyManager")
+        decrypt_widget.title("Decrypt - PassManager")
 
         self.decrypt_text = tk.Entry(decrypt_widget, width=65, font=("Ubuntu", 10))
         self.decrypt_text.grid(row=0, column=1, columnspan=6)
@@ -138,7 +137,7 @@ class Manager:
 
         #get_key.geometry("350x150")
         get_key.resizable(width=False, height=False)
-        get_key.title("Get Key - TinyManager")
+        get_key.title("Get Key - PassManager")
 
         #print(Fernet.generate_key())
         self.key = tk.Entry(get_key, width=65, font=("Ubuntu", 9))
@@ -162,7 +161,7 @@ class Manager:
         gen_pass.resizable(width=False, height=False)
 
         gen_pass.geometry("910x95")
-        gen_pass.title("Generate Password - TinyManager")
+        gen_pass.title("Generate Password - PassManager")
 
         self.pass_entry = tk.Entry(gen_pass, width=60, font=("Ubuntu", 20))
         self.pass_entry.grid(row=0, column=0, columnspan=6)
@@ -196,9 +195,9 @@ class Manager:
 
         about.resizable(width=False, height=False)
         #about.geometry("250x100")
-        about.title("About TinyManager")
+        about.title("About PassManager")
 
-        tk.Label(about, text="TinyManager v1 ~ 21.05.2019", font="20").grid(row=0,  column=0)
+        tk.Label(about, text="Simple Password Manager v1 ~ 21.05.2019", font="20").grid(row=0,  column=0)
         tk.Label(about, text="Created by Zodiac", font="20").grid(row=1,  column=0)
 
         about.mainloop()
